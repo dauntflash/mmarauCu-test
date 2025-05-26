@@ -2,4 +2,6 @@
 
 Site under testing
 
+- Loading motion added
+
 # Built on NextJs
