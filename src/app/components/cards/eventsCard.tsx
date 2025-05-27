@@ -1,8 +1,21 @@
+
 'use client';
 
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
+
+
+interface EventsCardProps {
+  event: {
+    eventTitle: string;
+    eventDate: string;
+    eventDescription: string;
+    eventVenue: string;
+    eventImage: string;
+  };
+  index: number;
+}
 
 const event = [
   {
@@ -34,8 +47,7 @@ const event = [
     eventImage: "/bg/images/event.jpg",
   },
 ];
-
-const EventCard = ({ event, index }: { event: any; index: number }) => {
+const EventCard: React.FC<EventsCardProps> = ({ event, index }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
